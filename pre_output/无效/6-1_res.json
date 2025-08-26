@@ -1,0 +1,302 @@
+{
+    "input_path": "/workspace/project/dataset/xhs/无效图片/6-1.jpg",
+    "page_index": null,
+    "model_settings": {
+        "use_doc_preprocessor": true,
+        "use_textline_orientation": false
+    },
+    "doc_preprocessor_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+            "use_doc_orientation_classify": false,
+            "use_doc_unwarping": false
+        },
+        "angle": -1
+    },
+    "dt_polys": [
+        [
+            [
+                79,
+                22
+            ],
+            [
+                541,
+                22
+            ],
+            [
+                541,
+                63
+            ],
+            [
+                79,
+                63
+            ]
+        ],
+        [
+            [
+                81,
+                63
+            ],
+            [
+                295,
+                64
+            ],
+            [
+                295,
+                82
+            ],
+            [
+                81,
+                80
+            ]
+        ],
+        [
+            [
+                305,
+                66
+            ],
+            [
+                528,
+                66
+            ],
+            [
+                528,
+                80
+            ],
+            [
+                305,
+                80
+            ]
+        ],
+        [
+            [
+                38,
+                757
+            ],
+            [
+                163,
+                624
+            ],
+            [
+                231,
+                689
+            ],
+            [
+                105,
+                821
+            ]
+        ],
+        [
+            [
+                387,
+                1076
+            ],
+            [
+                728,
+                895
+            ],
+            [
+                838,
+                1106
+            ],
+            [
+                497,
+                1287
+            ]
+        ],
+        [
+            [
+                83,
+                1649
+            ],
+            [
+                691,
+                1649
+            ],
+            [
+                691,
+                1669
+            ],
+            [
+                83,
+                1669
+            ]
+        ],
+        [
+            [
+                83,
+                1677
+            ],
+            [
+                931,
+                1677
+            ],
+            [
+                931,
+                1697
+            ],
+            [
+                83,
+                1697
+            ]
+        ]
+    ],
+    "text_det_params": {
+        "limit_side_len": 1280,
+        "limit_type": "min",
+        "thresh": 0.5,
+        "max_side_limit": 4000,
+        "box_thresh": 0.6,
+        "unclip_ratio": 1.5
+    },
+    "text_type": "general",
+    "textline_orientation_angles": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+    ],
+    "text_rec_score_thresh": 0.73,
+    "rec_texts": [
+        "NICEPHOTO奈司摄影",
+        "WEDDINGPHOTOAGENCY",
+        "CUSTOMERSERVICECENTER",
+        "COPYRIGHTBYNICEPHOTOGROUP,ALLRIGHTSRESERVER.",
+        "THOSERESPONSIBLEFORUNAUTHORIZEDREPRODUCTIONWILLBEPROSECUTED."
+    ],
+    "rec_scores": [
+        0.9895966649055481,
+        0.9964407682418823,
+        0.9955919981002808,
+        0.9809415340423584,
+        0.9951478242874146
+    ],
+    "rec_polys": [
+        [
+            [
+                79,
+                22
+            ],
+            [
+                541,
+                22
+            ],
+            [
+                541,
+                63
+            ],
+            [
+                79,
+                63
+            ]
+        ],
+        [
+            [
+                81,
+                63
+            ],
+            [
+                295,
+                64
+            ],
+            [
+                295,
+                82
+            ],
+            [
+                81,
+                80
+            ]
+        ],
+        [
+            [
+                305,
+                66
+            ],
+            [
+                528,
+                66
+            ],
+            [
+                528,
+                80
+            ],
+            [
+                305,
+                80
+            ]
+        ],
+        [
+            [
+                83,
+                1649
+            ],
+            [
+                691,
+                1649
+            ],
+            [
+                691,
+                1669
+            ],
+            [
+                83,
+                1669
+            ]
+        ],
+        [
+            [
+                83,
+                1677
+            ],
+            [
+                931,
+                1677
+            ],
+            [
+                931,
+                1697
+            ],
+            [
+                83,
+                1697
+            ]
+        ]
+    ],
+    "rec_boxes": [
+        [
+            79,
+            22,
+            541,
+            63
+        ],
+        [
+            81,
+            63,
+            295,
+            82
+        ],
+        [
+            305,
+            66,
+            528,
+            80
+        ],
+        [
+            83,
+            1649,
+            691,
+            1669
+        ],
+        [
+            83,
+            1677,
+            931,
+            1697
+        ]
+    ]
+}

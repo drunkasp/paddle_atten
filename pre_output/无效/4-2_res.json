@@ -1,0 +1,276 @@
+{
+    "input_path": "/workspace/project/dataset/xhs/无效图片/4-2.jpg",
+    "page_index": null,
+    "model_settings": {
+        "use_doc_preprocessor": true,
+        "use_textline_orientation": false
+    },
+    "doc_preprocessor_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+            "use_doc_orientation_classify": false,
+            "use_doc_unwarping": false
+        },
+        "angle": -1
+    },
+    "dt_polys": [
+        [
+            [
+                53,
+                68
+            ],
+            [
+                489,
+                68
+            ],
+            [
+                489,
+                184
+            ],
+            [
+                53,
+                184
+            ]
+        ],
+        [
+            [
+                473,
+                74
+            ],
+            [
+                500,
+                74
+            ],
+            [
+                500,
+                102
+            ],
+            [
+                473,
+                102
+            ]
+        ],
+        [
+            [
+                519,
+                839
+            ],
+            [
+                794,
+                884
+            ],
+            [
+                725,
+                1302
+            ],
+            [
+                450,
+                1257
+            ]
+        ],
+        [
+            [
+                437,
+                1700
+            ],
+            [
+                514,
+                1691
+            ],
+            [
+                519,
+                1739
+            ],
+            [
+                442,
+                1748
+            ]
+        ],
+        [
+            [
+                994,
+                1794
+            ],
+            [
+                1006,
+                1794
+            ],
+            [
+                1006,
+                1801
+            ],
+            [
+                994,
+                1801
+            ]
+        ],
+        [
+            [
+                472,
+                2425
+            ],
+            [
+                1445,
+                2427
+            ],
+            [
+                1445,
+                2448
+            ],
+            [
+                472,
+                2446
+            ]
+        ],
+        [
+            [
+                452,
+                2449
+            ],
+            [
+                1464,
+                2450
+            ],
+            [
+                1464,
+                2468
+            ],
+            [
+                452,
+                2467
+            ]
+        ]
+    ],
+    "text_det_params": {
+        "limit_side_len": 1280,
+        "limit_type": "min",
+        "thresh": 0.5,
+        "max_side_limit": 4000,
+        "box_thresh": 0.6,
+        "unclip_ratio": 1.5
+    },
+    "text_type": "general",
+    "textline_orientation_angles": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+    ],
+    "text_rec_score_thresh": 0.73,
+    "rec_texts": [
+        "SEVEN PHOTo",
+        "?",
+        "*柒媛摄影出品2O23NEWARRIVAL.COPYRIGHTBYSEVENPHOTOALLRIGHTSRESERVED.THOSERESPONSIBLEFORUNAUTORIZED",
+        "REPRODUCTIONWILLBEPROSECUTED.LAYOUTDESIGN&CONSTRUCTIONANDOPERATIONOFWEBSITESBYINFINITYARTSAD-AGENCY."
+    ],
+    "rec_scores": [
+        0.8954758048057556,
+        0.7425219416618347,
+        0.9891510605812073,
+        0.9905315637588501
+    ],
+    "rec_polys": [
+        [
+            [
+                53,
+                68
+            ],
+            [
+                489,
+                68
+            ],
+            [
+                489,
+                184
+            ],
+            [
+                53,
+                184
+            ]
+        ],
+        [
+            [
+                473,
+                74
+            ],
+            [
+                500,
+                74
+            ],
+            [
+                500,
+                102
+            ],
+            [
+                473,
+                102
+            ]
+        ],
+        [
+            [
+                472,
+                2425
+            ],
+            [
+                1445,
+                2427
+            ],
+            [
+                1445,
+                2448
+            ],
+            [
+                472,
+                2446
+            ]
+        ],
+        [
+            [
+                452,
+                2449
+            ],
+            [
+                1464,
+                2450
+            ],
+            [
+                1464,
+                2468
+            ],
+            [
+                452,
+                2467
+            ]
+        ]
+    ],
+    "rec_boxes": [
+        [
+            53,
+            68,
+            489,
+            184
+        ],
+        [
+            473,
+            74,
+            500,
+            102
+        ],
+        [
+            472,
+            2425,
+            1445,
+            2448
+        ],
+        [
+            452,
+            2449,
+            1464,
+            2468
+        ]
+    ]
+}

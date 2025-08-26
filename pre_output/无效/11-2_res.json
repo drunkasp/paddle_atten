@@ -1,0 +1,84 @@
+{
+    "input_path": "/workspace/project/dataset/xhs/无效图片/11-2.jpg",
+    "page_index": null,
+    "model_settings": {
+        "use_doc_preprocessor": true,
+        "use_textline_orientation": false
+    },
+    "doc_preprocessor_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+            "use_doc_orientation_classify": false,
+            "use_doc_unwarping": false
+        },
+        "angle": -1
+    },
+    "dt_polys": [
+        [
+            [
+                301,
+                1124
+            ],
+            [
+                390,
+                1124
+            ],
+            [
+                390,
+                1143
+            ],
+            [
+                301,
+                1143
+            ]
+        ]
+    ],
+    "text_det_params": {
+        "limit_side_len": 1280,
+        "limit_type": "min",
+        "thresh": 0.5,
+        "max_side_limit": 4000,
+        "box_thresh": 0.6,
+        "unclip_ratio": 1.5
+    },
+    "text_type": "general",
+    "textline_orientation_angles": [
+        -1
+    ],
+    "text_rec_score_thresh": 0.73,
+    "rec_texts": [
+        "九月照相馆"
+    ],
+    "rec_scores": [
+        0.9917572140693665
+    ],
+    "rec_polys": [
+        [
+            [
+                301,
+                1124
+            ],
+            [
+                390,
+                1124
+            ],
+            [
+                390,
+                1143
+            ],
+            [
+                301,
+                1143
+            ]
+        ]
+    ],
+    "rec_boxes": [
+        [
+            301,
+            1124,
+            390,
+            1143
+        ]
+    ]
+}

@@ -2,17 +2,17 @@ Global:
   model_name: PP-OCRv4_mobile_det # To use static model for inference.
   debug: false
   use_gpu: true
-  epoch_num: &epoch_num 500
+  epoch_num: &epoch_num 100
   log_smooth_window: 20
   print_batch_step: 100
-  save_model_dir: ./output/PP-OCRv4_mobile_det
+  save_model_dir: ./output/PP-OCRv4_mobile_pre_det
   save_epoch_step: 10
   eval_batch_step:
   - 0
   - 1500
   cal_metric_during_train: false
   checkpoints:
-  pretrained_model: https://paddleocr.bj.bcebos.com/pretrained/PPLCNetV3_x0_75_ocr_det.pdparams
+  pretrained_model:
   save_inference_dir: null
   use_visualdl: false
   infer_img: doc/imgs_en/img_10.jpg
@@ -71,9 +71,9 @@ Metric:
 Train:
   dataset:
     name: SimpleDataSet
-    data_dir: ./train_data/icdar2015/text_localization/
+    data_dir: /workspace/project/dataset/ccpd_det/train/image/
     label_file_list:
-      - ./train_data/icdar2015/text_localization/train_icdar2015_label.txt
+      - /workspace/project/dataset/ccpd_det/train/train_small.txt
     ratio_list: [1.0]
     transforms:
     - DecodeImage:
@@ -133,15 +133,15 @@ Train:
   loader:
     shuffle: true
     drop_last: false
-    batch_size_per_card: 8
-    num_workers: 8
+    batch_size_per_card: 4
+    num_workers: 2
 
 Eval:
   dataset:
     name: SimpleDataSet
-    data_dir: ./train_data/icdar2015/text_localization/
+    data_dir: /workspace/project/dataset/ccpd_det/val/image/
     label_file_list:
-      - ./train_data/icdar2015/text_localization/test_icdar2015_label.txt
+      - /workspace/project/dataset/ccpd_det/val/val.txt
     transforms:
     - DecodeImage:
         img_mode: BGR

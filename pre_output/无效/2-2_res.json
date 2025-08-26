@@ -1,0 +1,174 @@
+{
+    "input_path": "/workspace/project/dataset/xhs/无效图片/2-2.jpg",
+    "page_index": null,
+    "model_settings": {
+        "use_doc_preprocessor": true,
+        "use_textline_orientation": false
+    },
+    "doc_preprocessor_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+            "use_doc_orientation_classify": false,
+            "use_doc_unwarping": false
+        },
+        "angle": -1
+    },
+    "dt_polys": [
+        [
+            [
+                566,
+                1202
+            ],
+            [
+                755,
+                1202
+            ],
+            [
+                755,
+                1229
+            ],
+            [
+                566,
+                1229
+            ]
+        ],
+        [
+            [
+                854,
+                1202
+            ],
+            [
+                985,
+                1200
+            ],
+            [
+                985,
+                1228
+            ],
+            [
+                854,
+                1230
+            ]
+        ],
+        [
+            [
+                599,
+                1237
+            ],
+            [
+                953,
+                1237
+            ],
+            [
+                953,
+                1257
+            ],
+            [
+                599,
+                1257
+            ]
+        ]
+    ],
+    "text_det_params": {
+        "limit_side_len": 1280,
+        "limit_type": "min",
+        "thresh": 0.5,
+        "max_side_limit": 4000,
+        "box_thresh": 0.6,
+        "unclip_ratio": 1.5
+    },
+    "text_type": "general",
+    "textline_orientation_angles": [
+        -1,
+        -1,
+        -1
+    ],
+    "text_rec_score_thresh": 0.73,
+    "rec_texts": [
+        "ORAGAN",
+        "ARTS",
+        "photographerhan make-up:Junjun"
+    ],
+    "rec_scores": [
+        0.7918682098388672,
+        0.9809774160385132,
+        0.9295997023582458
+    ],
+    "rec_polys": [
+        [
+            [
+                566,
+                1202
+            ],
+            [
+                755,
+                1202
+            ],
+            [
+                755,
+                1229
+            ],
+            [
+                566,
+                1229
+            ]
+        ],
+        [
+            [
+                854,
+                1202
+            ],
+            [
+                985,
+                1200
+            ],
+            [
+                985,
+                1228
+            ],
+            [
+                854,
+                1230
+            ]
+        ],
+        [
+            [
+                599,
+                1237
+            ],
+            [
+                953,
+                1237
+            ],
+            [
+                953,
+                1257
+            ],
+            [
+                599,
+                1257
+            ]
+        ]
+    ],
+    "rec_boxes": [
+        [
+            566,
+            1202,
+            755,
+            1229
+        ],
+        [
+            854,
+            1200,
+            985,
+            1230
+        ],
+        [
+            599,
+            1237,
+            953,
+            1257
+        ]
+    ]
+}

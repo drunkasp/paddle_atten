@@ -1,0 +1,148 @@
+{
+    "input_path": "/workspace/project/dataset/xhs/无效图片/12-1.jpg",
+    "page_index": null,
+    "model_settings": {
+        "use_doc_preprocessor": true,
+        "use_textline_orientation": false
+    },
+    "doc_preprocessor_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+            "use_doc_orientation_classify": false,
+            "use_doc_unwarping": false
+        },
+        "angle": -1
+    },
+    "dt_polys": [
+        [
+            [
+                523,
+                1186
+            ],
+            [
+                600,
+                1186
+            ],
+            [
+                600,
+                1267
+            ],
+            [
+                523,
+                1267
+            ]
+        ],
+        [
+            [
+                739,
+                1182
+            ],
+            [
+                990,
+                1266
+            ],
+            [
+                961,
+                1351
+            ],
+            [
+                711,
+                1267
+            ]
+        ],
+        [
+            [
+                459,
+                1285
+            ],
+            [
+                658,
+                1285
+            ],
+            [
+                658,
+                1320
+            ],
+            [
+                459,
+                1320
+            ]
+        ]
+    ],
+    "text_det_params": {
+        "limit_side_len": 1280,
+        "limit_type": "min",
+        "thresh": 0.5,
+        "max_side_limit": 4000,
+        "box_thresh": 0.6,
+        "unclip_ratio": 1.5
+    },
+    "text_type": "general",
+    "textline_orientation_angles": [
+        -1,
+        -1,
+        -1
+    ],
+    "text_rec_score_thresh": 0.73,
+    "rec_texts": [
+        "GUCCT",
+        "模卡高端写真馆"
+    ],
+    "rec_scores": [
+        0.8805912137031555,
+        0.9933837652206421
+    ],
+    "rec_polys": [
+        [
+            [
+                739,
+                1182
+            ],
+            [
+                990,
+                1266
+            ],
+            [
+                961,
+                1351
+            ],
+            [
+                711,
+                1267
+            ]
+        ],
+        [
+            [
+                459,
+                1285
+            ],
+            [
+                658,
+                1285
+            ],
+            [
+                658,
+                1320
+            ],
+            [
+                459,
+                1320
+            ]
+        ]
+    ],
+    "rec_boxes": [
+        [
+            711,
+            1182,
+            990,
+            1351
+        ],
+        [
+            459,
+            1285,
+            658,
+            1320
+        ]
+    ]
+}

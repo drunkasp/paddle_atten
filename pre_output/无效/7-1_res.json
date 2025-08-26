@@ -1,0 +1,231 @@
+{
+    "input_path": "/workspace/project/dataset/xhs/无效图片/7-1.jpg",
+    "page_index": null,
+    "model_settings": {
+        "use_doc_preprocessor": true,
+        "use_textline_orientation": false
+    },
+    "doc_preprocessor_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+            "use_doc_orientation_classify": false,
+            "use_doc_unwarping": false
+        },
+        "angle": -1
+    },
+    "dt_polys": [
+        [
+            [
+                110,
+                78
+            ],
+            [
+                475,
+                81
+            ],
+            [
+                475,
+                144
+            ],
+            [
+                110,
+                141
+            ]
+        ],
+        [
+            [
+                289,
+                479
+            ],
+            [
+                491,
+                449
+            ],
+            [
+                519,
+                638
+            ],
+            [
+                317,
+                668
+            ]
+        ],
+        [
+            [
+                308,
+                667
+            ],
+            [
+                451,
+                710
+            ],
+            [
+                404,
+                868
+            ],
+            [
+                261,
+                825
+            ]
+        ],
+        [
+            [
+                1160,
+                848
+            ],
+            [
+                1783,
+                847
+            ],
+            [
+                1783,
+                902
+            ],
+            [
+                1160,
+                903
+            ]
+        ],
+        [
+            [
+                1071,
+                942
+            ],
+            [
+                1823,
+                943
+            ],
+            [
+                1823,
+                980
+            ],
+            [
+                1071,
+                979
+            ]
+        ],
+        [
+            [
+                252,
+                1209
+            ],
+            [
+                341,
+                1198
+            ],
+            [
+                358,
+                1330
+            ],
+            [
+                269,
+                1341
+            ]
+        ]
+    ],
+    "text_det_params": {
+        "limit_side_len": 1280,
+        "limit_type": "min",
+        "thresh": 0.5,
+        "max_side_limit": 4000,
+        "box_thresh": 0.6,
+        "unclip_ratio": 1.5
+    },
+    "text_type": "general",
+    "textline_orientation_angles": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+    ],
+    "text_rec_score_thresh": 0.73,
+    "rec_texts": [
+        "××××年×月×日",
+        "新的故事会在秋风中慢慢开始",
+        "The new story will begin slowly in the autumn wind."
+    ],
+    "rec_scores": [
+        0.8903334736824036,
+        0.994596540927887,
+        0.940554141998291
+    ],
+    "rec_polys": [
+        [
+            [
+                110,
+                78
+            ],
+            [
+                475,
+                81
+            ],
+            [
+                475,
+                144
+            ],
+            [
+                110,
+                141
+            ]
+        ],
+        [
+            [
+                1160,
+                848
+            ],
+            [
+                1783,
+                847
+            ],
+            [
+                1783,
+                902
+            ],
+            [
+                1160,
+                903
+            ]
+        ],
+        [
+            [
+                1071,
+                942
+            ],
+            [
+                1823,
+                943
+            ],
+            [
+                1823,
+                980
+            ],
+            [
+                1071,
+                979
+            ]
+        ]
+    ],
+    "rec_boxes": [
+        [
+            110,
+            78,
+            475,
+            144
+        ],
+        [
+            1160,
+            847,
+            1783,
+            903
+        ],
+        [
+            1071,
+            942,
+            1823,
+            980
+        ]
+    ]
+}

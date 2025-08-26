@@ -1,0 +1,307 @@
+{
+    "input_path": "/workspace/project/dataset/xhs/无效图片/4-1.jpg",
+    "page_index": null,
+    "model_settings": {
+        "use_doc_preprocessor": true,
+        "use_textline_orientation": false
+    },
+    "doc_preprocessor_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+            "use_doc_orientation_classify": false,
+            "use_doc_unwarping": false
+        },
+        "angle": -1
+    },
+    "dt_polys": [
+        [
+            [
+                50,
+                67
+            ],
+            [
+                528,
+                67
+            ],
+            [
+                528,
+                194
+            ],
+            [
+                50,
+                194
+            ]
+        ],
+        [
+            [
+                512,
+                75
+            ],
+            [
+                541,
+                75
+            ],
+            [
+                541,
+                104
+            ],
+            [
+                512,
+                104
+            ]
+        ],
+        [
+            [
+                611,
+                1239
+            ],
+            [
+                618,
+                1239
+            ],
+            [
+                618,
+                1251
+            ],
+            [
+                611,
+                1251
+            ]
+        ],
+        [
+            [
+                791,
+                1296
+            ],
+            [
+                798,
+                1296
+            ],
+            [
+                798,
+                1307
+            ],
+            [
+                791,
+                1307
+            ]
+        ],
+        [
+            [
+                775,
+                1313
+            ],
+            [
+                786,
+                1313
+            ],
+            [
+                786,
+                1320
+            ],
+            [
+                775,
+                1320
+            ]
+        ],
+        [
+            [
+                1233,
+                1618
+            ],
+            [
+                1241,
+                1616
+            ],
+            [
+                1242,
+                1621
+            ],
+            [
+                1234,
+                1623
+            ]
+        ],
+        [
+            [
+                1240,
+                1613
+            ],
+            [
+                1254,
+                1613
+            ],
+            [
+                1254,
+                1620
+            ],
+            [
+                1240,
+                1620
+            ]
+        ],
+        [
+            [
+                1266,
+                1632
+            ],
+            [
+                1271,
+                1637
+            ],
+            [
+                1266,
+                1642
+            ],
+            [
+                1261,
+                1637
+            ]
+        ],
+        [
+            [
+                498,
+                2421
+            ],
+            [
+                1480,
+                2421
+            ],
+            [
+                1480,
+                2441
+            ],
+            [
+                498,
+                2441
+            ]
+        ],
+        [
+            [
+                477,
+                2445
+            ],
+            [
+                1501,
+                2445
+            ],
+            [
+                1501,
+                2462
+            ],
+            [
+                477,
+                2462
+            ]
+        ]
+    ],
+    "text_det_params": {
+        "limit_side_len": 1280,
+        "limit_type": "min",
+        "thresh": 0.5,
+        "max_side_limit": 4000,
+        "box_thresh": 0.6,
+        "unclip_ratio": 1.5
+    },
+    "text_type": "general",
+    "textline_orientation_angles": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+    ],
+    "text_rec_score_thresh": 0.73,
+    "rec_texts": [
+        "SEVEN PHOTo",
+        "*柒媛摄影出品2O23NEWARRIVAL.COPYRIGHTBYSEVENPHOTO，ALLRIGHTSRESERVED.THOSERESPONSIBLEFORUNAUTORIZED",
+        "REPRODUCTIONWILLBEPROSECUTED.LAYOUTDESIGN&CONSTRUCTIONANDOPERATIONOFWEBSITESBYINFINITYARTSAD-AGENCY"
+    ],
+    "rec_scores": [
+        0.8800663352012634,
+        0.9837872982025146,
+        0.9956733584403992
+    ],
+    "rec_polys": [
+        [
+            [
+                50,
+                67
+            ],
+            [
+                528,
+                67
+            ],
+            [
+                528,
+                194
+            ],
+            [
+                50,
+                194
+            ]
+        ],
+        [
+            [
+                498,
+                2421
+            ],
+            [
+                1480,
+                2421
+            ],
+            [
+                1480,
+                2441
+            ],
+            [
+                498,
+                2441
+            ]
+        ],
+        [
+            [
+                477,
+                2445
+            ],
+            [
+                1501,
+                2445
+            ],
+            [
+                1501,
+                2462
+            ],
+            [
+                477,
+                2462
+            ]
+        ]
+    ],
+    "rec_boxes": [
+        [
+            50,
+            67,
+            528,
+            194
+        ],
+        [
+            498,
+            2421,
+            1480,
+            2441
+        ],
+        [
+            477,
+            2445,
+            1501,
+            2462
+        ]
+    ]
+}

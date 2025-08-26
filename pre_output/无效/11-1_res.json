@@ -1,0 +1,167 @@
+{
+    "input_path": "/workspace/project/dataset/xhs/无效图片/11-1.jpg",
+    "page_index": null,
+    "model_settings": {
+        "use_doc_preprocessor": true,
+        "use_textline_orientation": false
+    },
+    "doc_preprocessor_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+            "use_doc_orientation_classify": false,
+            "use_doc_unwarping": false
+        },
+        "angle": -1
+    },
+    "dt_polys": [
+        [
+            [
+                54,
+                1360
+            ],
+            [
+                235,
+                1360
+            ],
+            [
+                235,
+                1474
+            ],
+            [
+                54,
+                1474
+            ]
+        ],
+        [
+            [
+                1494,
+                2074
+            ],
+            [
+                1507,
+                2074
+            ],
+            [
+                1507,
+                2081
+            ],
+            [
+                1494,
+                2081
+            ]
+        ],
+        [
+            [
+                1507,
+                2085
+            ],
+            [
+                1512,
+                2090
+            ],
+            [
+                1507,
+                2095
+            ],
+            [
+                1502,
+                2090
+            ]
+        ],
+        [
+            [
+                538,
+                2371
+            ],
+            [
+                797,
+                2371
+            ],
+            [
+                797,
+                2416
+            ],
+            [
+                538,
+                2416
+            ]
+        ]
+    ],
+    "text_det_params": {
+        "limit_side_len": 1280,
+        "limit_type": "min",
+        "thresh": 0.5,
+        "max_side_limit": 4000,
+        "box_thresh": 0.6,
+        "unclip_ratio": 1.5
+    },
+    "text_type": "general",
+    "textline_orientation_angles": [
+        -1,
+        -1,
+        -1,
+        -1
+    ],
+    "text_rec_score_thresh": 0.73,
+    "rec_texts": [
+        "8813",
+        "九月照相馆"
+    ],
+    "rec_scores": [
+        0.7890884876251221,
+        0.9986541867256165
+    ],
+    "rec_polys": [
+        [
+            [
+                54,
+                1360
+            ],
+            [
+                235,
+                1360
+            ],
+            [
+                235,
+                1474
+            ],
+            [
+                54,
+                1474
+            ]
+        ],
+        [
+            [
+                538,
+                2371
+            ],
+            [
+                797,
+                2371
+            ],
+            [
+                797,
+                2416
+            ],
+            [
+                538,
+                2416
+            ]
+        ]
+    ],
+    "rec_boxes": [
+        [
+            54,
+            1360,
+            235,
+            1474
+        ],
+        [
+            538,
+            2371,
+            797,
+            2416
+        ]
+    ]
+}

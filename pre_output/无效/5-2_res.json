@@ -1,0 +1,186 @@
+{
+    "input_path": "/workspace/project/dataset/xhs/无效图片/5-2.jpg",
+    "page_index": null,
+    "model_settings": {
+        "use_doc_preprocessor": true,
+        "use_textline_orientation": false
+    },
+    "doc_preprocessor_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+            "use_doc_orientation_classify": false,
+            "use_doc_unwarping": false
+        },
+        "angle": -1
+    },
+    "dt_polys": [
+        [
+            [
+                1536,
+                1861
+            ],
+            [
+                1541,
+                1861
+            ],
+            [
+                1541,
+                1867
+            ],
+            [
+                1536,
+                1867
+            ]
+        ],
+        [
+            [
+                1502,
+                2228
+            ],
+            [
+                1507,
+                2228
+            ],
+            [
+                1507,
+                2234
+            ],
+            [
+                1502,
+                2234
+            ]
+        ],
+        [
+            [
+                1552,
+                2316
+            ],
+            [
+                1557,
+                2316
+            ],
+            [
+                1557,
+                2322
+            ],
+            [
+                1552,
+                2322
+            ]
+        ],
+        [
+            [
+                2398,
+                2413
+            ],
+            [
+                2506,
+                2413
+            ],
+            [
+                2506,
+                2456
+            ],
+            [
+                2398,
+                2456
+            ]
+        ],
+        [
+            [
+                2104,
+                2488
+            ],
+            [
+                2510,
+                2488
+            ],
+            [
+                2510,
+                2525
+            ],
+            [
+                2104,
+                2525
+            ]
+        ]
+    ],
+    "text_det_params": {
+        "limit_side_len": 1280,
+        "limit_type": "min",
+        "thresh": 0.5,
+        "max_side_limit": 4000,
+        "box_thresh": 0.6,
+        "unclip_ratio": 1.5
+    },
+    "text_type": "general",
+    "textline_orientation_angles": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+    ],
+    "text_rec_score_thresh": 0.73,
+    "rec_texts": [
+        "小红书",
+        "我的小红书号:4288769551"
+    ],
+    "rec_scores": [
+        0.9997615814208984,
+        0.9977155327796936
+    ],
+    "rec_polys": [
+        [
+            [
+                2398,
+                2413
+            ],
+            [
+                2506,
+                2413
+            ],
+            [
+                2506,
+                2456
+            ],
+            [
+                2398,
+                2456
+            ]
+        ],
+        [
+            [
+                2104,
+                2488
+            ],
+            [
+                2510,
+                2488
+            ],
+            [
+                2510,
+                2525
+            ],
+            [
+                2104,
+                2525
+            ]
+        ]
+    ],
+    "rec_boxes": [
+        [
+            2398,
+            2413,
+            2506,
+            2456
+        ],
+        [
+            2104,
+            2488,
+            2510,
+            2525
+        ]
+    ]
+}

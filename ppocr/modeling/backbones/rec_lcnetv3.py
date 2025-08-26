@@ -86,6 +86,40 @@ def make_divisible(v, divisor=16, min_value=None):
         new_v += divisor
     return new_v
 
+class CBAMLayer(nn.Layer):
+    def __init__(self, channel, reduction=16, spatial_kernel=7):
+        super(CBAMLayer, self).__init__()
+
+        # channel attention 压缩 H,W 为 1
+        self.max_pool = nn.AdaptiveMaxPool2D(1)
+        self.avg_pool = nn.AdaptiveAvgPool2D(1)
+
+        # shared MLP
+        self.mlp = nn.Sequential(
+            nn.Conv2D(channel, channel // reduction, 1, bias_attr=False),
+            nn.ReLU(),
+            nn.Conv2D(channel // reduction, channel, 1, bias_attr=False)
+        )
+
+        # spatial attention
+        self.conv = nn.Conv2D(2, 1, kernel_size=spatial_kernel,
+                              padding=spatial_kernel // 2, bias_attr=False)
+        self.sigmoid = nn.Sigmoid()
+
+    def forward(self, x):
+        # Channel Attention
+        max_out = self.mlp(self.max_pool(x))
+        avg_out = self.mlp(self.avg_pool(x))
+        channel_out = self.sigmoid(max_out + avg_out)
+        x = channel_out * x
+
+        # Spatial Attention
+        max_out = paddle.max(x, axis=1, keepdim=True)
+        avg_out = paddle.mean(x, axis=1, keepdim=True)
+        spatial_out = self.sigmoid(self.conv(paddle.concat([max_out, avg_out], axis=1)))
+        x = spatial_out * x
+
+        return x
 
 class LearnableAffineBlock(nn.Layer):
     def __init__(self, scale_value=1.0, bias_value=0.0, lr_mult=1.0, lab_lr=0.1):
@@ -503,6 +537,177 @@ class PPLCNetV3(nn.Layer):
                 )
                 for i, (k, in_c, out_c, s, se) in enumerate(self.net_config["blocks6"])
             ]
+        )
+        self.out_channels = make_divisible(512 * scale)
+
+        if self.det:
+            mv_c = [16, 24, 56, 480]
+            self.out_channels = [
+                make_divisible(self.net_config["blocks3"][-1][2] * scale),
+                make_divisible(self.net_config["blocks4"][-1][2] * scale),
+                make_divisible(self.net_config["blocks5"][-1][2] * scale),
+                make_divisible(self.net_config["blocks6"][-1][2] * scale),
+            ]
+
+            self.layer_list = nn.LayerList(
+                [
+                    nn.Conv2D(self.out_channels[0], int(mv_c[0] * scale), 1, 1, 0),
+                    nn.Conv2D(self.out_channels[1], int(mv_c[1] * scale), 1, 1, 0),
+                    nn.Conv2D(self.out_channels[2], int(mv_c[2] * scale), 1, 1, 0),
+                    nn.Conv2D(self.out_channels[3], int(mv_c[3] * scale), 1, 1, 0),
+                ]
+            )
+            self.out_channels = [
+                int(mv_c[0] * scale),
+                int(mv_c[1] * scale),
+                int(mv_c[2] * scale),
+                int(mv_c[3] * scale),
+            ]
+
+    def forward(self, x):
+        out_list = []
+        x = self.conv1(x)
+
+        x = self.blocks2(x)
+        x = self.blocks3(x)
+        out_list.append(x)
+        x = self.blocks4(x)
+        out_list.append(x)
+        x = self.blocks5(x)
+        out_list.append(x)
+        x = self.blocks6(x)
+        out_list.append(x)
+
+        if self.det:
+            out_list[0] = self.layer_list[0](out_list[0])
+            out_list[1] = self.layer_list[1](out_list[1])
+            out_list[2] = self.layer_list[2](out_list[2])
+            out_list[3] = self.layer_list[3](out_list[3])
+            return out_list
+
+        if self.training:
+            x = F.adaptive_avg_pool2d(x, [1, 40])
+        else:
+            x = F.avg_pool2d(x, [3, 2])
+        return x
+
+class PPLCNetV3_Atten(nn.Layer):
+    def __init__(
+        self,
+        scale=1.0,
+        conv_kxk_num=4,
+        lr_mult_list=[1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+        lab_lr=0.1,
+        det=False,
+        **kwargs,
+    ):
+        super().__init__()
+        self.scale = scale
+        self.lr_mult_list = lr_mult_list
+        self.det = det
+
+        self.net_config = NET_CONFIG_det if self.det else NET_CONFIG_rec
+
+        assert isinstance(
+            self.lr_mult_list, (list, tuple)
+        ), "lr_mult_list should be in (list, tuple) but got {}".format(
+            type(self.lr_mult_list)
+        )
+        assert (
+            len(self.lr_mult_list) == 6
+        ), "lr_mult_list length should be 6 but got {}".format(len(self.lr_mult_list))
+
+        self.conv1 = ConvBNLayer(
+            in_channels=3,
+            out_channels=make_divisible(16 * scale),
+            kernel_size=3,
+            stride=2,
+            lr_mult=self.lr_mult_list[0],
+        )
+
+        self.blocks2 = nn.Sequential(
+            *[
+                LCNetV3Block(
+                    in_channels=make_divisible(in_c * scale),
+                    out_channels=make_divisible(out_c * scale),
+                    dw_size=k,
+                    stride=s,
+                    use_se=se,
+                    conv_kxk_num=conv_kxk_num,
+                    lr_mult=self.lr_mult_list[1],
+                    lab_lr=lab_lr,
+                )
+                for i, (k, in_c, out_c, s, se) in enumerate(self.net_config["blocks2"])
+            ],
+            CBAMLayer(make_divisible(self.net_config["blocks2"][-1][2] * scale))
+        )
+
+        self.blocks3 = nn.Sequential(
+            *[
+                LCNetV3Block(
+                    in_channels=make_divisible(in_c * scale),
+                    out_channels=make_divisible(out_c * scale),
+                    dw_size=k,
+                    stride=s,
+                    use_se=se,
+                    conv_kxk_num=conv_kxk_num,
+                    lr_mult=self.lr_mult_list[2],
+                    lab_lr=lab_lr,
+                )
+                for i, (k, in_c, out_c, s, se) in enumerate(self.net_config["blocks3"])
+            ],
+            CBAMLayer(make_divisible(self.net_config["blocks3"][-1][2] * scale))
+        )
+
+        self.blocks4 = nn.Sequential(
+            *[
+                LCNetV3Block(
+                    in_channels=make_divisible(in_c * scale),
+                    out_channels=make_divisible(out_c * scale),
+                    dw_size=k,
+                    stride=s,
+                    use_se=se,
+                    conv_kxk_num=conv_kxk_num,
+                    lr_mult=self.lr_mult_list[3],
+                    lab_lr=lab_lr,
+                )
+                for i, (k, in_c, out_c, s, se) in enumerate(self.net_config["blocks4"])
+            ],
+            CBAMLayer(make_divisible(self.net_config["blocks4"][-1][2] * scale))
+        )
+
+        self.blocks5 = nn.Sequential(
+            *[
+                LCNetV3Block(
+                    in_channels=make_divisible(in_c * scale),
+                    out_channels=make_divisible(out_c * scale),
+                    dw_size=k,
+                    stride=s,
+                    use_se=se,
+                    conv_kxk_num=conv_kxk_num,
+                    lr_mult=self.lr_mult_list[4],
+                    lab_lr=lab_lr,
+                )
+                for i, (k, in_c, out_c, s, se) in enumerate(self.net_config["blocks5"])
+            ],
+            CBAMLayer(make_divisible(self.net_config["blocks5"][-1][2] * scale))
+        )
+
+        self.blocks6 = nn.Sequential(
+            *[
+                LCNetV3Block(
+                    in_channels=make_divisible(in_c * scale),
+                    out_channels=make_divisible(out_c * scale),
+                    dw_size=k,
+                    stride=s,
+                    use_se=se,
+                    conv_kxk_num=conv_kxk_num,
+                    lr_mult=self.lr_mult_list[5],
+                    lab_lr=lab_lr,
+                )
+                for i, (k, in_c, out_c, s, se) in enumerate(self.net_config["blocks6"])
+            ],
+            CBAMLayer(make_divisible(self.net_config["blocks6"][-1][2] * scale))
         )
         self.out_channels = make_divisible(512 * scale)
 

@@ -22,7 +22,7 @@ def build_backbone(config, model_type):
         from .det_resnet_vd import ResNet_vd
         from .det_resnet_vd_sast import ResNet_SAST
         from .det_pp_lcnet import PPLCNet
-        from .rec_lcnetv3 import PPLCNetV3
+        from .rec_lcnetv3 import PPLCNetV3,PPLCNetV3_Atten
         from .rec_hgnet import PPHGNet_small
         from .rec_vit import ViT
         from .det_pp_lcnet_v2 import PPLCNetV2_base
@@ -37,6 +37,7 @@ def build_backbone(config, model_type):
             "ResNet_SAST",
             "PPLCNet",
             "PPLCNetV3",
+            "PPLCNetV3_Atten",
             "PPHGNet_small",
             "PPLCNetV2_base",
             "RepSVTR_det",
@@ -67,7 +68,7 @@ def build_backbone(config, model_type):
         from .rec_hybridvit import HybridTransformer
         from .rec_donut_swin import DonutSwinModel
         from .rec_shallow_cnn import ShallowCNN
-        from .rec_lcnetv3 import PPLCNetV3
+        from .rec_lcnetv3 import PPLCNetV3,PPLCNetV3_Atten
         from .rec_hgnet import PPHGNet_small
         from .rec_vit_parseq import ViTParseQ
         from .rec_repvit import RepSVTR
@@ -97,6 +98,7 @@ def build_backbone(config, model_type):
             "DenseNet",
             "ShallowCNN",
             "PPLCNetV3",
+            "PPLCNetV3_Atten",
             "PPHGNet_small",
             "ViTParseQ",
             "ViT",

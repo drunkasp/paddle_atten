@@ -1,0 +1,129 @@
+{
+    "input_path": "/workspace/project/dataset/xhs/无效图片/3-2.jpg",
+    "page_index": null,
+    "model_settings": {
+        "use_doc_preprocessor": true,
+        "use_textline_orientation": false
+    },
+    "doc_preprocessor_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+            "use_doc_orientation_classify": false,
+            "use_doc_unwarping": false
+        },
+        "angle": -1
+    },
+    "dt_polys": [
+        [
+            [
+                284,
+                1541
+            ],
+            [
+                991,
+                1539
+            ],
+            [
+                991,
+                1660
+            ],
+            [
+                284,
+                1662
+            ]
+        ],
+        [
+            [
+                531,
+                1652
+            ],
+            [
+                747,
+                1654
+            ],
+            [
+                746,
+                1776
+            ],
+            [
+                530,
+                1774
+            ]
+        ]
+    ],
+    "text_det_params": {
+        "limit_side_len": 1280,
+        "limit_type": "min",
+        "thresh": 0.5,
+        "max_side_limit": 4000,
+        "box_thresh": 0.6,
+        "unclip_ratio": 1.5
+    },
+    "text_type": "general",
+    "textline_orientation_angles": [
+        -1,
+        -1
+    ],
+    "text_rec_score_thresh": 0.73,
+    "rec_texts": [
+        "撑头翻书看镜头",
+        "俯拍"
+    ],
+    "rec_scores": [
+        0.9974963068962097,
+        0.9874932765960693
+    ],
+    "rec_polys": [
+        [
+            [
+                284,
+                1541
+            ],
+            [
+                991,
+                1539
+            ],
+            [
+                991,
+                1660
+            ],
+            [
+                284,
+                1662
+            ]
+        ],
+        [
+            [
+                531,
+                1652
+            ],
+            [
+                747,
+                1654
+            ],
+            [
+                746,
+                1776
+            ],
+            [
+                530,
+                1774
+            ]
+        ]
+    ],
+    "rec_boxes": [
+        [
+            284,
+            1539,
+            991,
+            1662
+        ],
+        [
+            530,
+            1652,
+            747,
+            1776
+        ]
+    ]
+}

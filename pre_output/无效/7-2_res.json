@@ -1,0 +1,174 @@
+{
+    "input_path": "/workspace/project/dataset/xhs/无效图片/7-2.jpg",
+    "page_index": null,
+    "model_settings": {
+        "use_doc_preprocessor": true,
+        "use_textline_orientation": false
+    },
+    "doc_preprocessor_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+            "use_doc_orientation_classify": false,
+            "use_doc_unwarping": false
+        },
+        "angle": -1
+    },
+    "dt_polys": [
+        [
+            [
+                112,
+                81
+            ],
+            [
+                472,
+                83
+            ],
+            [
+                472,
+                142
+            ],
+            [
+                112,
+                140
+            ]
+        ],
+        [
+            [
+                1198,
+                485
+            ],
+            [
+                1752,
+                485
+            ],
+            [
+                1752,
+                539
+            ],
+            [
+                1198,
+                539
+            ]
+        ],
+        [
+            [
+                1180,
+                568
+            ],
+            [
+                1789,
+                575
+            ],
+            [
+                1789,
+                609
+            ],
+            [
+                1180,
+                602
+            ]
+        ]
+    ],
+    "text_det_params": {
+        "limit_side_len": 1280,
+        "limit_type": "min",
+        "thresh": 0.5,
+        "max_side_limit": 4000,
+        "box_thresh": 0.6,
+        "unclip_ratio": 1.5
+    },
+    "text_type": "general",
+    "textline_orientation_angles": [
+        -1,
+        -1,
+        -1
+    ],
+    "text_rec_score_thresh": 0.73,
+    "rec_texts": [
+        "'××××年×月×日",
+        "万物各有时令 爱也到了秋天",
+        "Everything sometimes brings love to autumn."
+    ],
+    "rec_scores": [
+        0.9279038310050964,
+        0.9668611884117126,
+        0.9542366862297058
+    ],
+    "rec_polys": [
+        [
+            [
+                112,
+                81
+            ],
+            [
+                472,
+                83
+            ],
+            [
+                472,
+                142
+            ],
+            [
+                112,
+                140
+            ]
+        ],
+        [
+            [
+                1198,
+                485
+            ],
+            [
+                1752,
+                485
+            ],
+            [
+                1752,
+                539
+            ],
+            [
+                1198,
+                539
+            ]
+        ],
+        [
+            [
+                1180,
+                568
+            ],
+            [
+                1789,
+                575
+            ],
+            [
+                1789,
+                609
+            ],
+            [
+                1180,
+                602
+            ]
+        ]
+    ],
+    "rec_boxes": [
+        [
+            112,
+            81,
+            472,
+            142
+        ],
+        [
+            1198,
+            485,
+            1752,
+            539
+        ],
+        [
+            1180,
+            568,
+            1789,
+            609
+        ]
+    ]
+}
